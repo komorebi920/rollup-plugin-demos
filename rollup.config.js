@@ -1,4 +1,4 @@
-const commonjs = require("@rollup/plugin-commonjs");
+const { nodeResolve } = require("@rollup/plugin-node-resolve");
 
 export default {
   input: "src/index.js",
@@ -6,5 +6,5 @@ export default {
     file: "dist/bundle.js",
     format: "cjs",
   },
-  plugins: [commonjs()],
+  plugins: [nodeResolve()],
 };
